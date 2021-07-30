@@ -1,0 +1,132 @@
+{
+  "workspace": "5743f1f3-5732-4e9d-9452-fd5ecda7a9fd",
+  "entities": [
+    {
+      "entity": "movie-title",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Jumanji",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "The Hunger Games",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Mockingjay",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Star Wars",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "greeting",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "hey",
+          "synonyms": [
+            "hi",
+            "hello",
+            "hiya",
+            "hi there",
+            "yo"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "pleasantries",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "please",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "thanks",
+          "synonyms": [
+            "thank you"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "answer",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "no",
+          "synonyms": [
+            "nope",
+            "nuh uh"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "yes",
+          "synonyms": [
+            "yeah",
+            "yep",
+            "uh huh"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "genre",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "action",
+          "synonyms": [
+            "blockbuster"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "romantic comedy",
+          "synonyms": [
+            "romcom",
+            "rom-com"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "romantic",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "comedy",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "comic-book",
+          "synonyms": [
+            "comic book",
+            "comic",
+            "marvel",
+            "dc",
+            "vertigo",
+            "dark horse"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "drama",
+          "synonyms": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "workspace" : "5743f1f3-5732-4e9d-9452-fd5ecda7a9fd",
+  "intents":
+  [
+    {
+      "intent": "break-me",
+      "examples": [
+        {
+          "text": "You need to be broken"
+        },
+        {
+          "text": "Break me"
+        },
+        {
+          "text": "Can you help me break the bot connector?"
+        },
+        {
+          "text": "Can you send me an invalid response?"
+        },
+        {
+          "text": "Break everything"
+        },
+        {
+          "text": "Break the bot connector"
+        }
+      ],
+      "description": "Attempt to break the bot connector with an invalid response"
+    },
+    {
+      "intent": "moviesearch",
+      "examples": [
+        {
+          "text": "jumanji"
+        },
+        {
+          "text": "I want to look up a movie"
+        },
+        {
+          "text": "Can you tell me more about a movie?"
+        },
+        {
+          "text": "Can you tell me more about Star Wars?"
+        },
+        {
+          "text": "I want more information around a movie"
+        },
+        {
+          "text": "I want to check a movie"
+        }
+      ],
+      "description": "Searching a movie"
+    },
+    {
+      "intent": "test_encodedmetadata_with_structuredContent",
+      "examples": [
+        {
+          "text": "enmsc"
+        },
+        {
+          "text": "encoded structured metadata"
+        },
+        {
+          "text": "encoded metadata structured content"
+        },
+        {
+          "text": "encoded structured content"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "how's it hanging?"
+        },
+        {
+          "text": "sup?"
+        },
+        {
+          "text": "Hey, how are you?"
+        },
+        {
+          "text": "How're you?"
+        },
+        {
+          "text": "howzit?"
+        },
+        {
+          "text": "what's up?"
+        }
+      ],
+      "description": "Responses to how are you etc."
+    },
+    {
+      "intent": "fallback",
+      "examples": [
+        {
+          "text": "test"
+        }
+      ],
+      "description": "fallback if i don´t understand"
+    },
+    {
+      "intent": "test_encoded_metadata_quick_replies",
+      "examples": [
+        {
+          "text": "emdqr"
+        },
+        {
+          "text": "encoded metadata quick replies"
+        },
+        {
+          "text": "quick replies with encoded metadata"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "private_message_single",
+      "examples": [
+        {
+          "text": "pvtmsg"
+        },
+        {
+          "text": "pvt msg"
+        }
+      ],
+      "description": "Private message single responsee"
+    },
+    {
+      "intent": "test_encoded_metadata_with_image",
+      "examples": [
+        {
+          "text": "imrcen"
+        },
+        {
+          "text": "image encoded metadata"
+        },
+        {
+          "text": "image with encoded metadata"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "private_msg_with_transfer",
+      "examples": [
+        {
+          "text": "pvt ttr"
+        },
+        {
+          "text": "pvttr"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "escalation",
+      "examples": [
+        {
+          "text": "I want to speak to a human"
+        },
+        {
+          "text": "I want to talk to a live agent"
+        },
+        {
+          "text": "Speak to someone"
+        },
+        {
+          "text": "Can I speak to a live agent?"
+        },
+        {
+          "text": "Can I speak to someone?"
+        },
+        {
+          "text": "Speak to human"
+        }
+      ],
+      "description": "Escalation to a live agent"
+    },
+    {
+      "intent": "recommendation",
+      "examples": [
+        {
+          "text": "Can you please find me something to watch?"
+        },
+        {
+          "text": "I'm not sure what to watch? Any suggestions?"
+        },
+        {
+          "text": "What action movie do you recommend?"
+        },
+        {
+          "text": "Can you suggest a comic-book movie?"
+        },
+        {
+          "text": "What should I watch for movie night?"
+        }
+      ],
+      "description": "When the customer asks for a recommendation"
+    },
+    {
+      "intent": "test_encodedmetadata_with_text",
+      "examples": [
+        {
+          "text": "text encoded metadata"
+        },
+        {
+          "text": "encoded metadata text"
+        },
+        {
+          "text": "emdt"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "test_options_with_encoded_metadata",
+      "examples": [
+        {
+          "text": "list encoded metadata"
+        },
+        {
+          "text": "lemd"
+        },
+        {
+          "text": "lemda"
+        },
+        {
+          "text": "options encoded metadata"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "test-sdes",
+      "examples": [
+        {
+          "text": "i want to test sdes"
+        },
+        {
+          "text": "test sdes"
+        }
+      ],
+      "description": "test sdes intent"
+    },
+    {
+      "intent": "goodbye",
+      "examples": [
+        {
+          "text": "See ya!"
+        },
+        {
+          "text": "Bye"
+        },
+        {
+          "text": "That's it for now"
+        },
+        {
+          "text": "Goodbye"
+        },
+        {
+          "text": "Thanks! That's it for today!"
+        },
+        {
+          "text": "Adios!"
+        },
+        {
+          "text": "Au revoir!"
+        },
+        {
+          "text": "That's all thanks."
+        }
+      ],
+      "description": "Goodbye intent"
+    },
+    {
+      "intent": "capabilities",
+      "examples": [
+        {
+          "text": "Help"
+        },
+        {
+          "text": "What are you capable of?"
+        }
+      ],
+      "description": "Bot Capabilities"
+    },
+    {
+      "intent": "bad_sc",
+      "examples": [
+        {
+          "text": "badsc"
+        },
+        {
+          "text": "bad sc"
+        }
+      ]
+    },
+    {
+      "intent": "buytickets",
+      "examples": [
+        {
+          "text": "Can I book a ticket?"
+        },
+        {
+          "text": "I want to see a movie. Can you help me book a ticket?"
+        },
+        {
+          "text": "I want to book a movie"
+        },
+        {
+          "text": "Let me book a ticket"
+        },
+        {
+          "text": "I want to book a ticket"
+        }
+      ],
+      "description": "Buy tickets"
+    }
+  ]
+}

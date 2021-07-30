@@ -3,7 +3,7 @@ package watson.gateway.service;
 
 import com.ibm.watson.assistant.v1.model.Workspace;
 import watson.gateway.domain.Credentials;
-import watson.gateway.domain.Entities;
+import watson.gateway.domain.EntityManager;
 import watson.gateway.dto.EntityPayload;
 import watson.gateway.domain.WorkspaceManager;
 
@@ -42,7 +42,7 @@ public class TrainService {
     }
 
     private void createEntity(String apikey, String versionDate, String serviceUrl, List<EntityPayload> entityList, String workspaceId) {
-        Entities entities = new Entities(apikey, versionDate, serviceUrl);
+        EntityManager entities = new EntityManager(apikey, versionDate, serviceUrl);
 //        entityList.stream().
 //                map(entity -> entities.create(workspaceId, entity.getEntityName(), entity.getEntityList()));
 

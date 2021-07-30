@@ -6,12 +6,12 @@ import com.ibm.watson.assistant.v1.model.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Entities {
+public class EntityManager {
 
     Assistant assistant;
     AssistantBuilder assistantBuilder;
 
-    public Entities(String apikey, String versionDate, String serviceUrl) {
+    public EntityManager(String apikey, String versionDate, String serviceUrl) {
         assistantBuilder = new AssistantBuilder();
         assistant = assistantBuilder.buildAssistant(apikey, versionDate, serviceUrl);
     }
@@ -24,19 +24,13 @@ public class Entities {
         return response;
     }
 
-    public com.ibm.watson.assistant.v1.model.Entity create(String workspaceId, String entityName, List<String> entityValueList) {
-
-//        List<CreateValue> entityValues = new ArrayList<CreateValue>();
-//        entityValues.add(new CreateValue.Builder("water").build());
-//        entityValues.add(new CreateValue.Builder("orange juice").build());
-//        entityValues.add(new CreateValue.Builder("soda").build());
-
-        List<CreateValue> entityValues = entityValueList.stream().
-                map(entityValue -> new CreateValue.Builder(entityValue).build()).
+    public com.ibm.watson.assistant.v1.model.Entity create(String workspaceId, watson.gateway.dto.Entity entity) {
+        List<CreateValue> entityValues = entity.getValues().stream().
+                map(entityValue -> new CreateValue.Builder(entityValue.getValue()).build()).
                 collect(Collectors.toList());
 
 
-        CreateEntityOptions options = new CreateEntityOptions.Builder(workspaceId, entityName)
+        CreateEntityOptions options = new CreateEntityOptions.Builder(workspaceId, entity.getEntity())
                 .values(entityValues)
                 .build();
 
