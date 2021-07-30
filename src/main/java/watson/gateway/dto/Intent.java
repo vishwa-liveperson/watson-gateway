@@ -11,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @ToString
 public class Intent {
-    private String intentName;
-    private String workspaceId;
-    private List<IntentText> intentTexts;
+    public String intent;
+    public List<Example> examples;
+    public String description;
 }

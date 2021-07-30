@@ -8,6 +8,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class IntentText {
-    public String intentTextName;
+public class Example {
+    public String text;
 }

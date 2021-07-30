@@ -29,9 +29,9 @@ public class IntentController {
 
 
     @PostMapping("/createIntents")
-    public String createIntentAPI(@RequestBody Intent intent) throws Exception {
-        System.out.println(intent);
-        createIntent(intent);
+    public String createIntentAPI(@RequestBody watson.gateway.dto.Intents intents) throws Exception {
+        System.out.println(intents);
+//        createIntent(intent);
         return "Valid Intent configured !!";
     }
 
@@ -42,10 +42,12 @@ public class IntentController {
     }
 
     private void deleteIntent(Intent intent) throws Exception {
-        intents.delete(intent.getWorkspaceId(), intent.getIntentName());
+//        intents.delete(intent.getWorkspaceId(), intent.getIntentName());
     }
 
     public void createIntent(Intent intent) throws Exception {
-        intents.create(intent.getWorkspaceId(), intent.getIntentName());
+        //TODO : Process Intents, Examples and Description
+        //TODO : get encrypted workspace id via payload
+//        intents.create(intent.getWorkspaceId(), intent.getIntentName());
     }
 }

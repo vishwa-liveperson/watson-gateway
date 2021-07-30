@@ -1,0 +1,1199 @@
+{
+  "intents": [
+    {
+      "intent": "break-me",
+      "examples": [
+        {
+          "text": "You need to be broken"
+        },
+        {
+          "text": "Break me"
+        },
+        {
+          "text": "Can you help me break the bot connector?"
+        },
+        {
+          "text": "Can you send me an invalid response?"
+        },
+        {
+          "text": "Break everything"
+        },
+        {
+          "text": "Break the bot connector"
+        }
+      ],
+      "description": "Attempt to break the bot connector with an invalid response"
+    },
+    {
+      "intent": "moviesearch",
+      "examples": [
+        {
+          "text": "jumanji"
+        },
+        {
+          "text": "I want to look up a movie"
+        },
+        {
+          "text": "Can you tell me more about a movie?"
+        },
+        {
+          "text": "Can you tell me more about Star Wars?"
+        },
+        {
+          "text": "I want more information around a movie"
+        },
+        {
+          "text": "I want to check a movie"
+        }
+      ],
+      "description": "Searching a movie"
+    },
+    {
+      "intent": "test_encodedmetadata_with_structuredContent",
+      "examples": [
+        {
+          "text": "enmsc"
+        },
+        {
+          "text": "encoded structured metadata"
+        },
+        {
+          "text": "encoded metadata structured content"
+        },
+        {
+          "text": "encoded structured content"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "how's it hanging?"
+        },
+        {
+          "text": "sup?"
+        },
+        {
+          "text": "Hey, how are you?"
+        },
+        {
+          "text": "How're you?"
+        },
+        {
+          "text": "howzit?"
+        },
+        {
+          "text": "what's up?"
+        }
+      ],
+      "description": "Responses to how are you etc."
+    },
+    {
+      "intent": "fallback",
+      "examples": [
+        {
+          "text": "test"
+        }
+      ],
+      "description": "fallback if i don´t understand"
+    },
+    {
+      "intent": "test_encoded_metadata_quick_replies",
+      "examples": [
+        {
+          "text": "emdqr"
+        },
+        {
+          "text": "encoded metadata quick replies"
+        },
+        {
+          "text": "quick replies with encoded metadata"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "private_message_single",
+      "examples": [
+        {
+          "text": "pvtmsg"
+        },
+        {
+          "text": "pvt msg"
+        }
+      ],
+      "description": "Private message single responsee"
+    },
+    {
+      "intent": "test_encoded_metadata_with_image",
+      "examples": [
+        {
+          "text": "imrcen"
+        },
+        {
+          "text": "image encoded metadata"
+        },
+        {
+          "text": "image with encoded metadata"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "private_msg_with_transfer",
+      "examples": [
+        {
+          "text": "pvt ttr"
+        },
+        {
+          "text": "pvttr"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "escalation",
+      "examples": [
+        {
+          "text": "I want to speak to a human"
+        },
+        {
+          "text": "I want to talk to a live agent"
+        },
+        {
+          "text": "Speak to someone"
+        },
+        {
+          "text": "Can I speak to a live agent?"
+        },
+        {
+          "text": "Can I speak to someone?"
+        },
+        {
+          "text": "Speak to human"
+        }
+      ],
+      "description": "Escalation to a live agent"
+    },
+    {
+      "intent": "recommendation",
+      "examples": [
+        {
+          "text": "Can you please find me something to watch?"
+        },
+        {
+          "text": "I'm not sure what to watch? Any suggestions?"
+        },
+        {
+          "text": "What action movie do you recommend?"
+        },
+        {
+          "text": "Can you suggest a comic-book movie?"
+        },
+        {
+          "text": "What should I watch for movie night?"
+        }
+      ],
+      "description": "When the customer asks for a recommendation"
+    },
+    {
+      "intent": "test_encodedmetadata_with_text",
+      "examples": [
+        {
+          "text": "text encoded metadata"
+        },
+        {
+          "text": "encoded metadata text"
+        },
+        {
+          "text": "emdt"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "test_options_with_encoded_metadata",
+      "examples": [
+        {
+          "text": "list encoded metadata"
+        },
+        {
+          "text": "lemd"
+        },
+        {
+          "text": "lemda"
+        },
+        {
+          "text": "options encoded metadata"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "test-sdes",
+      "examples": [
+        {
+          "text": "i want to test sdes"
+        },
+        {
+          "text": "test sdes"
+        }
+      ],
+      "description": "test sdes intent"
+    },
+    {
+      "intent": "goodbye",
+      "examples": [
+        {
+          "text": "See ya!"
+        },
+        {
+          "text": "Bye"
+        },
+        {
+          "text": "That's it for now"
+        },
+        {
+          "text": "Goodbye"
+        },
+        {
+          "text": "Thanks! That's it for today!"
+        },
+        {
+          "text": "Adios!"
+        },
+        {
+          "text": "Au revoir!"
+        },
+        {
+          "text": "That's all thanks."
+        }
+      ],
+      "description": "Goodbye intent"
+    },
+    {
+      "intent": "capabilities",
+      "examples": [
+        {
+          "text": "Help"
+        },
+        {
+          "text": "What are you capable of?"
+        }
+      ],
+      "description": "Bot Capabilities"
+    },
+    {
+      "intent": "bad_sc",
+      "examples": [
+        {
+          "text": "badsc"
+        },
+        {
+          "text": "bad sc"
+        }
+      ]
+    },
+    {
+      "intent": "buytickets",
+      "examples": [
+        {
+          "text": "Can I book a ticket?"
+        },
+        {
+          "text": "I want to see a movie. Can you help me book a ticket?"
+        },
+        {
+          "text": "I want to book a movie"
+        },
+        {
+          "text": "Let me book a ticket"
+        },
+        {
+          "text": "I want to book a ticket"
+        }
+      ],
+      "description": "Buy tickets"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "movie-title",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Jumanji",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "The Hunger Games",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Mockingjay",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Star Wars",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "greeting",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "hey",
+          "synonyms": [
+            "hi",
+            "hello",
+            "hiya",
+            "hi there",
+            "yo"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "pleasantries",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "please",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "thanks",
+          "synonyms": [
+            "thank you"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "answer",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "no",
+          "synonyms": [
+            "nope",
+            "nuh uh"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "yes",
+          "synonyms": [
+            "yeah",
+            "yep",
+            "uh huh"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "genre",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "action",
+          "synonyms": [
+            "blockbuster"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "romantic comedy",
+          "synonyms": [
+            "romcom",
+            "rom-com"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "romantic",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "comedy",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "comic-book",
+          "synonyms": [
+            "comic book",
+            "comic",
+            "marvel",
+            "dc",
+            "vertigo",
+            "dark horse"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "drama",
+          "synonyms": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_3_1529022423736",
+      "metadata": {},
+      "variable": "$title",
+      "dialog_node": "slot_4_1529022459514",
+      "previous_sibling": "node_9_1529022532283"
+    },
+    {
+      "type": "standard",
+      "title": "Perform action",
+      "output": {
+        "text": {
+          "values": [
+            "Checking that now...."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1529022423736",
+      "actions": [
+        {
+          "name": "jerome.gilden@hotmail.com_dev/entertainment-bot/fetch-movies",
+          "type": "server",
+          "parameters": {
+            "title": "$title"
+          },
+          "credentials": "$private.my_creds",
+          "result_variable": "movies"
+        }
+      ],
+      "metadata": {},
+      "conditions": "$title",
+      "dialog_node": "node_9_1529022532283"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry, did I spoil it?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1526360455149",
+      "metadata": {},
+      "conditions": "true",
+      "dialog_node": "node_3_1526360597402"
+    },
+    {
+      "type": "frame",
+      "title": "Get movie title",
+      "output": {
+        "text": {
+          "values": [
+            "What's the movie title?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1529022385033",
+      "metadata": {
+        "fallback": "leave"
+      },
+      "dialog_node": "node_3_1529022423736",
+      "digress_out": "allow_all",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "What's the title of the movie?"
+      },
+      "parent": "slot_4_1529022459514",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1529022459514",
+      "previous_sibling": "handler_5_1529022459514"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_4_1529022459514",
+      "context": {
+        "title": "@movie-title"
+      },
+      "conditions": "@movie-title",
+      "event_name": "input",
+      "dialog_node": "handler_5_1529022459514"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "text": {
+          "values": [
+            "Alrighty then! Let's try a real spoiler. At the end of Avengers, e-",
+            "Guess you like playing on the edge. Fine, here's a real spoiler. Darth Vader is in Rogue One.",
+            "Okay, then. Try this one on for size. Jim Carrey's character in the Truman Show is actually on a television show the entire time!"
+          ],
+          "selection_policy": "random"
+        }
+      },
+      "parent": "node_3_1526360597402",
+      "metadata": {},
+      "conditions": "@answer == 'no'",
+      "dialog_node": "node_5_1526360776008",
+      "previous_sibling": "node_4_1526360644730"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1526360597402",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1526360903341"
+      },
+      "conditions": "@answer == 'yes'",
+      "dialog_node": "node_4_1526360644730"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1571665836809",
+      "output": {
+        "text": {
+          "values": [
+            "nope did not receive lpSdes"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1571665720499",
+      "conditions": "anything_else",
+      "dialog_node": "response_8_1571665836809",
+      "previous_sibling": "response_5_1571665823114"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1571665823114",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "lpSdes: <? $lpSdes?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1571665720499",
+      "context": {},
+      "conditions": "$lpSdes",
+      "dialog_node": "response_5_1571665823114"
+    },
+    {
+      "type": "standard",
+      "title": "Private Message",
+      "output": {
+        "text": {
+          "values": [
+            {
+              "text": "A Private Text",
+              "messageAudience": "AGENTS_AND_MANAGERS"
+            }
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "conditions": "#private_message_single",
+      "dialog_node": "node_5_1589444957833",
+      "previous_sibling": "node_10_1573217517825"
+    },
+    {
+      "type": "standard",
+      "title": "Bad Structured Content",
+      "output": {
+        "text": {
+          "values": [
+            {
+              "metadata": [
+                {
+                  "id": "1234",
+                  "type": "badMeta"
+                }
+              ],
+              "structuredContent": {
+                "type": "vertical",
+                "elements": [
+                  {
+                    "type": "button",
+                    "click": {
+                      "actions": [
+                        {
+                          "text": "Recommend me a movie, please",
+                          "type": "publishText"
+                        }
+                      ]
+                    },
+                    "title": "Recommend a movie"
+                  }
+                ]
+              }
+            }
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "context": {
+        "encodedMetadata": "ewoiaWQiOiAic2MiCn0="
+      },
+      "conditions": "#bad_sc",
+      "dialog_node": "node_7_1589456145020",
+      "previous_sibling": "node_10_1589445168013"
+    },
+    {
+      "type": "standard",
+      "title": "Private Message with Transfer",
+      "output": {
+        "text": {
+          "values": [
+            {
+              "text": "This is a private text",
+              "messageAudience": "AGENTS_AND_MANAGERS"
+            }
+          ]
+        }
+      },
+      "actions": [
+        {
+          "name": "TRANSFER",
+          "type": "client",
+          "parameters": {
+            "skill": "human_skill"
+          },
+          "result_variable": "none"
+        }
+      ],
+      "conditions": "#private_msg_with_transfer",
+      "dialog_node": "node_10_1589445168013",
+      "previous_sibling": "node_5_1589444957833"
+    },
+    {
+      "type": "standard",
+      "title": "General",
+      "output": {
+        "text": {
+          "values": [
+            "I'm doing pretty good! Thank you for asking!"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "#greeting",
+      "dialog_node": "node_4_1526536121476",
+      "previous_sibling": "node_3_1526535900559"
+    },
+    {
+      "type": "standard",
+      "title": "StructuredContent with encoded metadata",
+      "output": {
+        "text": {
+          "values": [
+            {
+              "metadata": [
+                {
+                  "id": "1234",
+                  "type": "ExternalId"
+                }
+              ],
+              "structuredContent": {
+                "type": "vertical",
+                "elements": [
+                  {
+                    "type": "button",
+                    "click": {
+                      "actions": [
+                        {
+                          "text": "Recommend me a movie, please",
+                          "type": "publishText"
+                        }
+                      ]
+                    },
+                    "title": "Recommend a movie"
+                  }
+                ]
+              }
+            }
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "context": {
+        "encodedMetadata": "ewoiaWQiOiAic2MiCn0="
+      },
+      "conditions": "#test_encodedmetadata_with_structuredContent",
+      "dialog_node": "node_5_1573128435914",
+      "previous_sibling": "node_4_1573129722639"
+    },
+    {
+      "type": "standard",
+      "title": "Search movie",
+      "output": {
+        "text": {
+          "values": [
+            "Sure thing. Just might need a few details from you."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1529022423736"
+      },
+      "conditions": "#moviesearch",
+      "dialog_node": "node_2_1529022385033",
+      "previous_sibling": "node_1_1529019504917"
+    },
+    {
+      "type": "standard",
+      "title": "Quick Replies with encoded metadata",
+      "output": {
+        "text": {
+          "values": [
+            {
+              "metadata": [
+                {
+                  "id": "1234",
+                  "type": "ExternalId"
+                }
+              ],
+              "structuredContent": {
+                "message": "Message to send before sending QuickReplies content",
+                "quickReplies": {
+                  "type": "quickReplies",
+                  "replies": [
+                    {
+                      "type": "button",
+                      "click": {
+                        "actions": [
+                          {
+                            "text": "yep",
+                            "type": "publishText"
+                          }
+                        ],
+                        "metadata": [
+                          {
+                            "id": "Yes-1234",
+                            "type": "ExternalId"
+                          }
+                        ]
+                      },
+                      "title": "yes",
+                      "tooltip": "yes i do"
+                    },
+                    {
+                      "type": "button",
+                      "click": {
+                        "actions": [
+                          {
+                            "text": "No!",
+                            "type": "publishText"
+                          }
+                        ],
+                        "metadata": [
+                          {
+                            "id": "No-4321",
+                            "type": "ExternalId"
+                          }
+                        ]
+                      },
+                      "title": "No!",
+                      "tooltip": "No!"
+                    }
+                  ],
+                  "itemsPerRow": 8
+                }
+              }
+            }
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "context": {
+        "encodedMetadata": "ewoiaWQiOiAicXVpY2sgcmVwbGllcyIKfQ=="
+      },
+      "conditions": "#test_encoded_metadata_quick_replies",
+      "dialog_node": "node_4_1573129722639",
+      "previous_sibling": "node_7_1573131430611"
+    },
+    {
+      "type": "standard",
+      "title": "Capabilities",
+      "output": {
+        "text": {
+          "values": [
+            {
+              "metadata": {
+                "id": "1234",
+                "type": "ExternalId"
+              },
+              "structuredContent": {
+                "type": "vertical",
+                "elements": [
+                  {
+                    "type": "button",
+                    "click": {
+                      "actions": [
+                        {
+                          "text": "Recommend me a movie, please",
+                          "type": "publishText"
+                        }
+                      ]
+                    },
+                    "title": "Recommend a movie"
+                  }
+                ]
+              }
+            }
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "#capabilities",
+      "dialog_node": "node_1_1526347946194",
+      "previous_sibling": "node_7_1589456145020"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_1_1529987635433"
+    },
+    {
+      "type": "standard",
+      "title": "List response with encoded metadata",
+      "output": {
+        "generic": [
+          {
+            "title": "List with encoded metadata",
+            "options": [
+              {
+                "label": "A",
+                "value": {
+                  "input": {
+                    "text": "A"
+                  }
+                }
+              },
+              {
+                "label": "B",
+                "value": {
+                  "input": {
+                    "text": "B"
+                  }
+                }
+              }
+            ],
+            "description": "List with encoded metadata",
+            "response_type": "option"
+          }
+        ]
+      },
+      "context": {
+        "encodedMetadata": "ewoiaWQiOiAiTGlzdCIKfQ=="
+      },
+      "conditions": "#test_options_with_encoded_metadata",
+      "dialog_node": "node_10_1573220184511",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Escalation Point (to agent)",
+      "output": {
+        "text": {
+          "values": [
+            "Escalating to a human"
+          ]
+        }
+      },
+      "actions": [
+        {
+          "name": "TRANSFER",
+          "type": "client",
+          "parameters": {
+            "skill": "human_skill"
+          },
+          "result_variable": "none"
+        }
+      ],
+      "metadata": {},
+      "conditions": "#escalation",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_6_1526360903341",
+      "previous_sibling": "node_2_1526360455149"
+    },
+    {
+      "type": "standard",
+      "title": "Goodbye w/ pleasantries",
+      "output": {
+        "text": {
+          "values": [
+            "No worries! Have a great day!"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "actions": [
+        {
+          "name": "CLOSE_CONVERSATION",
+          "type": "client",
+          "result_variable": "none"
+        }
+      ],
+      "metadata": {},
+      "conditions": "#goodbye && @pleasantries:thanks",
+      "dialog_node": "node_1_1526535621499",
+      "previous_sibling": "node_6_1526360903341"
+    },
+    {
+      "type": "standard",
+      "title": "Recommend a movie",
+      "output": {
+        "text": {
+          "values": [
+            "I think you should watch Avengers: Infinity War if you haven't already. My favourite scene is where ***** punches ******",
+            "You should watch The One. My favourite scene is when Jet Li punches ****** and then delivers a roundhouse to ******** face.",
+            "Have you watched The Hunger Games? I heard people died in it."
+          ],
+          "selection_policy": "random"
+        }
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#recommendation",
+      "dialog_node": "node_2_1526360455149",
+      "previous_sibling": "node_1_1526347946194"
+    },
+    {
+      "type": "standard",
+      "title": "Ticket Booking",
+      "output": {
+        "text": {
+          "values": [
+            "I can help you book your ticket!"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "#buytickets",
+      "dialog_node": "node_1_1529019504917",
+      "previous_sibling": "node_4_1526536121476"
+    },
+    {
+      "type": "standard",
+      "title": "Hello",
+      "output": {
+        "text": {
+          "values": [
+            "Hi there! How can I help you today?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1526347946194"
+      },
+      "conditions": "@greeting:hey",
+      "dialog_node": "node_3_1526535900559",
+      "previous_sibling": "node_2_1526535774449"
+    },
+    {
+      "type": "standard",
+      "title": "Goodbye w/ out pleasantries",
+      "output": {
+        "text": {
+          "values": [
+            "Thanks for chatting with us today!"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "actions": [
+        {
+          "name": "CLOSE_CONVERSATION",
+          "type": "client",
+          "result_variable": "none"
+        }
+      ],
+      "metadata": {},
+      "conditions": "#goodbye && @pleasantries != 'thanks'",
+      "dialog_node": "node_2_1526535774449",
+      "previous_sibling": "node_1_1526535621499"
+    },
+    {
+      "type": "standard",
+      "title": "Break me",
+      "output": {
+        "text": {
+          "values": [
+            [
+              {
+                "message": 10
+              },
+              1342,
+              1421421,
+              "test"
+            ]
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "#break-me",
+      "dialog_node": "node_1_1529987635433",
+      "previous_sibling": "node_2_1529022385033"
+    },
+    {
+      "type": "standard",
+      "title": "Text response with the encoded metadata",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This is text with encoded metadata"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "encodedMetadata": "ewoiaWQiOiAidGV4dCIKfQ=="
+      },
+      "conditions": "#test_encodedmetadata_with_text",
+      "dialog_node": "node_7_1573131430611",
+      "previous_sibling": "node_10_1573220184511"
+    },
+    {
+      "type": "standard",
+      "title": "Image Response with encoded metadata",
+      "output": {
+        "generic": [
+          {
+            "title": "IMG with MetaData",
+            "source": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/retail/nov-2019/homepage/black-friday-sales-event-logo-hp-offer-well.png",
+            "description": "IMG Response with",
+            "response_type": "image"
+          }
+        ]
+      },
+      "context": {
+        "encodedMetadata": "ewoiaWQiOiAiSW1hZ2UiCn0="
+      },
+      "conditions": "#test_encoded_metadata_with_image",
+      "dialog_node": "node_10_1573217517825",
+      "previous_sibling": "node_5_1573128435914"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "text": {
+          "values": [
+            "Hey there! I'm the entertainment bot."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "dialog_node": "Welcome",
+      "previous_sibling": "node_9_1571665720499"
+    },
+    {
+      "type": "standard",
+      "title": "tets sdes",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#test-sdes",
+      "dialog_node": "node_9_1571665720499"
+    }
+  ],
+  "counterexamples": [
+    {
+      "text": "hey"
+    },
+    {
+      "text": "Test"
+    },
+    {
+      "text": "what's up?"
+    }
+  ],
+  "learning_opt_out": false,
+  "name": "EntertainmentBot",
+  "language": "en",
+  "description": "The Entertainment Bot, is the entertainment bot!"
+}
