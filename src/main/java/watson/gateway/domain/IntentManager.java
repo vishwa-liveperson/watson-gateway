@@ -22,12 +22,15 @@ public class IntentManager {
         return response;
     }
 
-    public Intent create(String workspaceId, String intent){
+    public Intent create(String workspaceId, watson.gateway.dto.Intent intent){
         List<Example> examples = new ArrayList<>();
-        examples.add(new Example.Builder("Good morning").build());
-        examples.add(new Example.Builder("Hi there").build());
 
-        CreateIntentOptions options = new CreateIntentOptions.Builder(workspaceId, intent)
+        List<watson.gateway.dto.Example> intentExamples = intent.getExamples();
+        for(watson.gateway.dto.Example example : intentExamples){
+            examples.add(new Example.Builder(example.getText()).build());
+        }
+
+        CreateIntentOptions options = new CreateIntentOptions.Builder(workspaceId, intent.getIntent())
                 .examples(examples)
                 .build();
 

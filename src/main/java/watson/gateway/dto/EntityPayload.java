@@ -10,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Entity {
+public class EntityPayload {
     public String entity;
     public List<Value> values;
 }

@@ -59,7 +59,7 @@ public class IntentController {
         //TODO : Process Intents, Examples and Description
         //TODO : get encrypted workspace id via payload
         for(Intent intent : intentList){
-            intentManager.create(intentPayload.getWorkspace(), intent.getIntent());
+            intentManager.create(intentPayload.getWorkspace(), intent);
         }
 
     }

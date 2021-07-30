@@ -4,7 +4,7 @@ package watson.gateway.service;
 import com.ibm.watson.assistant.v1.model.Workspace;
 import watson.gateway.domain.Credentials;
 import watson.gateway.domain.Entities;
-import watson.gateway.dto.Entity;
+import watson.gateway.dto.EntityPayload;
 import watson.gateway.domain.WorkspaceManager;
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class TrainService {
         String serviceUrl = credentials.getServiceUrl();
         Workspace workSpace = createWorkSpace(apikey, versionDate, serviceUrl, workspaceName, workspaceDescription);
         String workspaceId = workSpace.getWorkspaceId();
-        List<Entity> entityList = mockEntityList();
+        List<EntityPayload> entityList = mockEntityList();
 
         createEntity(apikey, versionDate, serviceUrl, entityList, workspaceId);
 
@@ -31,8 +31,8 @@ public class TrainService {
     }
 
     //TODO : This should be passed by test
-    private List<Entity> mockEntityList() {
-        List<Entity> entityList = new ArrayList<>();
+    private List<EntityPayload> mockEntityList() {
+        List<EntityPayload> entityList = new ArrayList<>();
 //        entityList.add(new Entity("Fruit", Arrays.asList("Apple", "Orange")));
         return entityList;
     }
@@ -41,7 +41,7 @@ public class TrainService {
 
     }
 
-    private void createEntity(String apikey, String versionDate, String serviceUrl, List<Entity> entityList, String workspaceId) {
+    private void createEntity(String apikey, String versionDate, String serviceUrl, List<EntityPayload> entityList, String workspaceId) {
         Entities entities = new Entities(apikey, versionDate, serviceUrl);
 //        entityList.stream().
 //                map(entity -> entities.create(workspaceId, entity.getEntityName(), entity.getEntityList()));
