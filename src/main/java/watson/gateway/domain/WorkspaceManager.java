@@ -4,12 +4,12 @@ import com.ibm.cloud.sdk.core.http.Response;
 import com.ibm.watson.assistant.v1.Assistant;
 import com.ibm.watson.assistant.v1.model.*;
 
-public class Workspaces {
+public class WorkspaceManager {
 
     Assistant assistant;
     AssistantBuilder assistantBuilder;
 
-    public Workspaces(String apikey, String versionDate, String serviceUrl){
+    public WorkspaceManager(String apikey, String versionDate, String serviceUrl){
         assistantBuilder = new AssistantBuilder();
         assistant = assistantBuilder.buildAssistant(apikey, versionDate, serviceUrl);
     }

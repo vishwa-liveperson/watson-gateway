@@ -6,12 +6,12 @@ import com.ibm.watson.assistant.v1.model.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Intents {
+public class IntentManager {
 
     Assistant assistant;
     AssistantBuilder assistantBuilder;
 
-    public Intents(String apikey, String versionDate, String serviceUrl){
+    public IntentManager(String apikey, String versionDate, String serviceUrl){
         assistantBuilder = new AssistantBuilder();
         assistant = assistantBuilder.buildAssistant(apikey, versionDate, serviceUrl);
     }

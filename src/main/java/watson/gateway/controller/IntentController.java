@@ -3,10 +3,13 @@ package watson.gateway.controller;
 
 
 
-import watson.gateway.domain.Intents;
+import watson.gateway.domain.IntentManager;
 import watson.gateway.dto.Intent;
 import org.springframework.web.bind.annotation.*;
+import watson.gateway.dto.IntentPayload;
 import watson.gateway.util.EncodeDecode;
+
+import java.util.List;
 
 @RestController
 @RequestMapping
@@ -15,7 +18,7 @@ public class IntentController {
     String apikey;
     String versionDate;
     String serviceUrl;
-    Intents intents;
+    IntentManager intentManager;
 
     public IntentController(){
         //Credentials - How do we pass these via REST endpoints - headers ?
@@ -23,15 +26,15 @@ public class IntentController {
         versionDate = EncodeDecode.decode("MjAyMS0wNy0xOA==");
         serviceUrl = "https://api.eu-gb.assistant.watson.cloud.ibm.com";
 
-        intents = new Intents(apikey, versionDate, serviceUrl);
+        intentManager = new IntentManager(apikey, versionDate, serviceUrl);
     }
 
 
 
     @PostMapping("/createIntents")
-    public String createIntentAPI(@RequestBody watson.gateway.dto.Intents intents) throws Exception {
-        System.out.println(intents);
-//        createIntent(intent);
+    public String createIntentAPI(@RequestBody IntentPayload intentPayload) throws Exception {
+        System.out.println(intentPayload);
+        createIntent(intentPayload);
         return "Valid Intent configured !!";
     }
 
@@ -45,9 +48,19 @@ public class IntentController {
 //        intents.delete(intent.getWorkspaceId(), intent.getIntentName());
     }
 
-    public void createIntent(Intent intent) throws Exception {
+    public void createIntent(IntentPayload intentPayload) {
+        String workspaceId = intentPayload.getWorkspace();
+        System.out.println("Creating intents for workspace :  " + workspaceId);
+        List<Intent> intentList = intentPayload.getIntents();
+//        intentList.
+//                stream().
+//                map(intent -> intentManager.create(workspaceId, intent.getIntent()));
+
         //TODO : Process Intents, Examples and Description
         //TODO : get encrypted workspace id via payload
-//        intents.create(intent.getWorkspaceId(), intent.getIntentName());
+        for(Intent intent : intentList){
+            intentManager.create(intentPayload.getWorkspace(), intent.getIntent());
+        }
+
     }
 }
