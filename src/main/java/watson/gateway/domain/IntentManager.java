@@ -2,23 +2,29 @@ package watson.gateway.domain;
 
 import com.ibm.watson.assistant.v1.Assistant;
 import com.ibm.watson.assistant.v1.model.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class IntentManager {
 
-    Assistant assistant;
-    AssistantBuilder assistantBuilder;
+    @Autowired
+    private Credentials credentials;
 
-    public IntentManager(String apikey, String versionDate, String serviceUrl){
-        assistantBuilder = new AssistantBuilder();
-        assistant = assistantBuilder.buildAssistant(apikey, versionDate, serviceUrl);
+    @Autowired
+    private AssistantBuilder assistantBuilder;
+
+    public IntentManager(Credentials credentials, AssistantBuilder assistantBuilder){
+        this.credentials = credentials;
+        this.assistantBuilder = assistantBuilder;
     }
 
     public IntentCollection list(String workspaceId){
         ListIntentsOptions options = new ListIntentsOptions.Builder(workspaceId).build();
-        IntentCollection response = assistant.listIntents(options).execute().getResult();
+        IntentCollection response = assistantBuilder.getAssistant().listIntents(options).execute().getResult();
         return response;
     }
 
@@ -34,7 +40,7 @@ public class IntentManager {
                 .examples(examples)
                 .build();
 
-        Intent response = assistant.createIntent(options).execute().getResult();
+        Intent response = assistantBuilder.getAssistant().createIntent(options).execute().getResult();
 
         return response;
     }
@@ -42,7 +48,7 @@ public class IntentManager {
     public Intent get(String workspaceId, String intent){
         GetIntentOptions options = new GetIntentOptions.Builder(workspaceId, intent).build();
 
-        Intent response = assistant.getIntent(options).execute().getResult();
+        Intent response = assistantBuilder.getAssistant().getIntent(options).execute().getResult();
 
         return response;
     }
@@ -53,13 +59,13 @@ public class IntentManager {
                 .newDescription(description)
                 .build();
 
-        Intent response = assistant.updateIntent(options).execute().getResult();
+        Intent response = assistantBuilder.getAssistant().updateIntent(options).execute().getResult();
 
         return response;
     }
 
     public void delete(String workspaceId, String intent){
         DeleteIntentOptions options = new DeleteIntentOptions.Builder(workspaceId, intent).build();
-        assistant.deleteIntent(options).execute();
+        assistantBuilder.getAssistant().deleteIntent(options).execute();
     }
 }

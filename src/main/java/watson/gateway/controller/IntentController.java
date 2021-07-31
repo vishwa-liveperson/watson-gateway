@@ -1,8 +1,8 @@
 package watson.gateway.controller;
 
-
-
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.client.RestTemplate;
+import watson.gateway.domain.Credentials;
 import watson.gateway.domain.IntentManager;
 import watson.gateway.dto.Intent;
 import org.springframework.web.bind.annotation.*;
@@ -14,26 +14,15 @@ import java.util.List;
 @RestController
 @RequestMapping
 public class IntentController {
+    private IntentManager intentManager;
 
-    String apikey;
-    String versionDate;
-    String serviceUrl;
-    IntentManager intentManager;
-
-    public IntentController(){
-        //Credentials - How do we pass these via REST endpoints - headers ?
-        apikey = EncodeDecode.decode("MWRpWmhXckFtYnVJUWtZdEpSQmQtOHR1allWQXZuUFFjVXNuTXFZNjMzSno=");
-        versionDate = EncodeDecode.decode("MjAyMS0wNy0xOA==");
-        serviceUrl = "https://api.eu-gb.assistant.watson.cloud.ibm.com";
-
-        intentManager = new IntentManager(apikey, versionDate, serviceUrl);
+    @Autowired
+    public IntentController(Credentials credentials, IntentManager intentManager){
+        this.intentManager = intentManager;
     }
-
-
 
     @PostMapping("/createIntents")
     public String createIntentAPI(@RequestBody IntentPayload intentPayload) throws Exception {
-        System.out.println(intentPayload);
         createIntent(intentPayload);
         return "Valid Intent configured !!";
     }
@@ -52,12 +41,6 @@ public class IntentController {
         String workspaceId = intentPayload.getWorkspace();
         System.out.println("Creating intents for workspace :  " + workspaceId);
         List<Intent> intentList = intentPayload.getIntents();
-//        intentList.
-//                stream().
-//                map(intent -> intentManager.create(workspaceId, intent.getIntent()));
-
-        //TODO : Process Intents, Examples and Description
-        //TODO : get encrypted workspace id via payload
         for(Intent intent : intentList){
             intentManager.create(intentPayload.getWorkspace(), intent);
         }

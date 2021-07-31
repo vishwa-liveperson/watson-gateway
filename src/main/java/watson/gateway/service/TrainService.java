@@ -2,6 +2,8 @@ package watson.gateway.service;
 
 
 import com.ibm.watson.assistant.v1.model.Workspace;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import watson.gateway.domain.Credentials;
 import watson.gateway.domain.EntityManager;
 import watson.gateway.dto.EntityPayload;
@@ -10,8 +12,15 @@ import watson.gateway.domain.WorkspaceManager;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class TrainService {
     WorkspaceManager workspaces;
+
+    @Autowired
+    public TrainService(WorkspaceManager workspaces){
+
+        this.workspaces = workspaces;
+    }
 
     public void train(Credentials credentials) {
 
@@ -42,14 +51,14 @@ public class TrainService {
     }
 
     private void createEntity(String apikey, String versionDate, String serviceUrl, List<EntityPayload> entityList, String workspaceId) {
-        EntityManager entities = new EntityManager(apikey, versionDate, serviceUrl);
+//        EntityManager entities = new EntityManager(apikey, versionDate, serviceUrl);
 //        entityList.stream().
 //                map(entity -> entities.create(workspaceId, entity.getEntityName(), entity.getEntityList()));
 
     }
 
     private Workspace createWorkSpace(String apikey, String versionDate, String serviceUrl, String workspaceName, String workspaceDescription) {
-        workspaces = new WorkspaceManager(apikey, versionDate, serviceUrl);
+//        workspaces = new WorkspaceManager(apikey, versionDate, serviceUrl);
         return workspaces.create(workspaceName, workspaceDescription);
     }
 }

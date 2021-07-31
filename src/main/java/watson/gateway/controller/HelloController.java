@@ -1,6 +1,7 @@
 package watson.gateway.controller;
 
 
+import org.springframework.http.HttpHeaders;
 import watson.gateway.client.User;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,8 +10,8 @@ import org.springframework.web.bind.annotation.*;
 public class HelloController {
 
     @PostMapping("/hello")
-    public void hello(@RequestBody User user){
+    public void hello(@RequestHeader HttpHeaders headers, @RequestBody User user){
         System.out.println(user.getName());
-//        return "Done";
+        System.out.println(user);
     }
 }

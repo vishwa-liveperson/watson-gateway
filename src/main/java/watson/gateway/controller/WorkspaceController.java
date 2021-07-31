@@ -2,6 +2,7 @@ package watson.gateway.controller;
 
 import com.ibm.cloud.sdk.core.http.Response;
 import com.ibm.watson.assistant.v1.model.Workspace;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import watson.gateway.domain.WorkspaceManager;
 import watson.gateway.dto.WorkspacePayload;
@@ -11,12 +12,11 @@ import watson.gateway.util.EncodeDecode;
 @RequestMapping
 public class WorkspaceController {
 
-    WorkspaceManager workspaceManager;
-    public WorkspaceController(){
-        String apikey = EncodeDecode.decode("MWRpWmhXckFtYnVJUWtZdEpSQmQtOHR1allWQXZuUFFjVXNuTXFZNjMzSno=");
-        String versionDate = EncodeDecode.decode("MjAyMS0wNy0xOA==");
-        String serviceUrl = "https://api.eu-gb.assistant.watson.cloud.ibm.com";
-        workspaceManager = new WorkspaceManager(apikey, versionDate, serviceUrl);
+    private WorkspaceManager workspaceManager;
+
+    @Autowired
+    public WorkspaceController(WorkspaceManager workspaceManager){
+        this.workspaceManager = workspaceManager;
     }
 
     @PostMapping("/createWorkspace")

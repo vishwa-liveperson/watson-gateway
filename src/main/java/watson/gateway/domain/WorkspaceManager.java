@@ -3,20 +3,22 @@ package watson.gateway.domain;
 import com.ibm.cloud.sdk.core.http.Response;
 import com.ibm.watson.assistant.v1.Assistant;
 import com.ibm.watson.assistant.v1.model.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class WorkspaceManager {
 
-    Assistant assistant;
-    AssistantBuilder assistantBuilder;
+    @Autowired
+    private AssistantBuilder assistantBuilder;
 
-    public WorkspaceManager(String apikey, String versionDate, String serviceUrl){
-        assistantBuilder = new AssistantBuilder();
-        assistant = assistantBuilder.buildAssistant(apikey, versionDate, serviceUrl);
+    public WorkspaceManager(AssistantBuilder assistantBuilder){
+        this.assistantBuilder = assistantBuilder;
     }
 
     public WorkspaceCollection list(){
         ListWorkspacesOptions options = new ListWorkspacesOptions.Builder().build();
-        WorkspaceCollection workspaces = assistant.listWorkspaces(options).execute().getResult();
+        WorkspaceCollection workspaces = assistantBuilder.getAssistant().listWorkspaces(options).execute().getResult();
         return workspaces;
     }
 
@@ -26,11 +28,11 @@ public class WorkspaceManager {
                 .description(workspaceDescription)
                 .build();
 
-        return assistant.createWorkspace(options).execute().getResult();
+        return assistantBuilder.getAssistant().createWorkspace(options).execute().getResult();
     }
 
     public Response<Void> delete(String workspaceId){
         DeleteWorkspaceOptions options = new DeleteWorkspaceOptions.Builder(workspaceId).build();
-        return assistant.deleteWorkspace(options).execute();
+        return assistantBuilder.getAssistant().deleteWorkspace(options).execute();
     }
 }

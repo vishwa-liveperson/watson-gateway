@@ -9,8 +9,8 @@ public class Examples {
     AssistantBuilder assistantBuilder;
 
     public Examples(String apikey, String versionDate, String serviceUrl){
-        assistantBuilder = new AssistantBuilder();
-        assistant = assistantBuilder.buildAssistant(apikey, versionDate, serviceUrl);
+//        assistantBuilder = new AssistantBuilder();
+//        assistant = assistantBuilder.buildAssistant(apikey, versionDate, serviceUrl);
     }
 
     public ExampleCollection list(String workspaceId, String intent){

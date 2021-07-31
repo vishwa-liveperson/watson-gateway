@@ -1,25 +1,25 @@
 package watson.gateway.domain;
 
-import com.ibm.watson.assistant.v1.Assistant;
 import com.ibm.watson.assistant.v1.model.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
+@Component
 public class EntityManager {
 
-    Assistant assistant;
     AssistantBuilder assistantBuilder;
 
-    public EntityManager(String apikey, String versionDate, String serviceUrl) {
-        assistantBuilder = new AssistantBuilder();
-        assistant = assistantBuilder.buildAssistant(apikey, versionDate, serviceUrl);
+    @Autowired
+    public EntityManager(AssistantBuilder assistantBuilder) {
+        this.assistantBuilder = assistantBuilder;
     }
 
     public EntityCollection list(String workspaceId) {
         ListEntitiesOptions options = new ListEntitiesOptions.Builder(workspaceId).build();
 
-        EntityCollection response = assistant.listEntities(options).execute().getResult();
+        EntityCollection response = assistantBuilder.getAssistant().listEntities(options).execute().getResult();
 
         return response;
     }
@@ -34,7 +34,7 @@ public class EntityManager {
                 .values(entityValues)
                 .build();
 
-        com.ibm.watson.assistant.v1.model.Entity result = assistant.createEntity(options).execute().getResult();
+        com.ibm.watson.assistant.v1.model.Entity result = assistantBuilder.getAssistant().createEntity(options).execute().getResult();
 
         return result;
     }
@@ -42,7 +42,7 @@ public class EntityManager {
     public Entity get(String workspaceId, String entityName) {
         GetEntityOptions options = new GetEntityOptions.Builder(workspaceId, entityName).build();
 
-        return assistant.getEntity(options).execute().getResult();
+        return assistantBuilder.getAssistant().getEntity(options).execute().getResult();
     }
 
     public com.ibm.watson.assistant.v1.model.Entity update(String workspaceId, String description, String entityName) {
@@ -50,13 +50,13 @@ public class EntityManager {
                 .newDescription(description)
                 .build();
 
-        return assistant.updateEntity(options).execute().getResult();
+        return assistantBuilder.getAssistant().updateEntity(options).execute().getResult();
 
     }
 
     public void delete(String workspaceId, String entityName) {
         DeleteEntityOptions options = new DeleteEntityOptions.Builder(workspaceId, entityName).build();
 
-        assistant.deleteEntity(options).execute();
+        assistantBuilder.getAssistant().deleteEntity(options).execute();
     }
 }
