@@ -4,9 +4,12 @@ import com.ibm.watson.assistant.v1.Assistant;
 import com.ibm.watson.assistant.v1.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import watson.gateway.PredictIntent;
+import watson.gateway.PredictResponse;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class IntentManager {
@@ -67,5 +70,24 @@ public class IntentManager {
     public void delete(String workspaceId, String intent){
         DeleteIntentOptions options = new DeleteIntentOptions.Builder(workspaceId, intent).build();
         assistantBuilder.getAssistant().deleteIntent(options).execute();
+    }
+
+    public List<PredictResponse> predict(String workspaceId, List<String> textList) {
+        List<PredictResponse> predictResponseList = new ArrayList<>();
+        for(String text : textList){
+            MessageInput input = new MessageInput();
+            input.setText(text);
+            MessageOptions options = new MessageOptions.Builder(workspaceId).input(input).build();
+
+            MessageResponse response = assistantBuilder.getAssistant().message(options).execute().getResult();
+            List<PredictIntent> predictIntents = response.getIntents().
+                    stream().
+                    map(res -> new PredictIntent(res.intent(), res.confidence())).
+                    collect(Collectors.toList());
+
+            predictResponseList.add(new PredictResponse(text, predictIntents));
+        }
+
+        return predictResponseList;
     }
 }
