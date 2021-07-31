@@ -1,11 +1,10 @@
 package watson.gateway.domain;
 
-import com.ibm.watson.assistant.v1.Assistant;
 import com.ibm.watson.assistant.v1.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import watson.gateway.PredictIntent;
-import watson.gateway.PredictResponse;
+import watson.gateway.dto.PredictIntent;
+import watson.gateway.dto.PredictResponse;
 
 import java.util.ArrayList;
 import java.util.List;

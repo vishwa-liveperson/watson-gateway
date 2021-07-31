@@ -1,4 +1,4 @@
-package watson.gateway;
+package watson.gateway.dto;
 
 import lombok.*;
 

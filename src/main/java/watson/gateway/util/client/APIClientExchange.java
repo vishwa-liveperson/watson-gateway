@@ -1,45 +1,40 @@
-package watson.gateway.client;
+package watson.gateway.util.client;
 
-import org.apache.commons.io.IOUtils;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
-import org.springframework.http.client.ClientHttpRequest;
 import org.springframework.http.client.ClientHttpResponse;
-import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.client.RequestCallback;
 import org.springframework.web.client.ResponseExtractor;
 import org.springframework.web.client.RestTemplate;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStream;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
 //https://howtodoinjava.com/spring-boot2/resttemplate/spring-restful-client-resttemplate-example/#post-example
 //https://howtodoinjava.com/spring-boot2/resttemplate/resttemplate-post-json-example/
 @PropertySource("classpath:application.properties")
-public class APIClient {
+public class APIClientExchange {
     public static void main(String[] args) throws IOException {
 
         String url = "http://localhost:9002/hello";
 
-        final RequestCallback requestCallback = request -> {
-            request.getHeaders().setContentType(MediaType.APPLICATION_JSON);
-            String initialString = " {\"name\":\"Test\", \"job\" : \"dev\"}";
-            InputStream inputStream = new ByteArrayInputStream(initialString.getBytes());
-                IOUtils.copy(inputStream, request.getBody());
-        };
-        final RestTemplate restTemplate = new RestTemplate();
-        SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
-        requestFactory.setBufferRequestBody(false);
-        restTemplate.setRequestFactory(requestFactory);
-        ClientHttpResponse response = restTemplate.execute(url, HttpMethod.POST, requestCallback,
-                new ResponseFromHeadersExtractor());
+        RestTemplate restTemplate = new RestTemplate();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("key", "keyValue");
+        headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
 
-        System.out.println(response);
+        User user = new User();
+        user.setName("Testing");
+        user.setJob("dev");
+
+        HttpEntity<User> entity = new HttpEntity<>(user, headers);
+
+        restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
 
     }
 

@@ -2,7 +2,7 @@ package watson.gateway.controller;
 
 
 import org.springframework.http.HttpHeaders;
-import watson.gateway.client.User;
+import watson.gateway.util.client.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

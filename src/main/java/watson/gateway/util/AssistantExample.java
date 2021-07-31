@@ -1,4 +1,4 @@
-package watson.gateway;
+package watson.gateway.util;
 
 import com.ibm.cloud.sdk.core.http.Response;
 import com.ibm.cloud.sdk.core.http.ServiceCallback;
@@ -11,6 +11,8 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 import watson.gateway.domain.AssistantBuilder;
 import watson.gateway.domain.Credentials;
+import watson.gateway.dto.PredictIntent;
+import watson.gateway.dto.PredictResponse;
 
 import java.util.ArrayList;
 import java.util.List;

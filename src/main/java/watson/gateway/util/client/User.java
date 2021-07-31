@@ -1,4 +1,4 @@
-package watson.gateway.client;
+package watson.gateway.util.client;
 
 public class User {
     private String name;
