@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "eee21e17-1e62-4d79-95b4-effc7930fc9c",
+		"name": "WatsonGateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "workspace",
+			"item": [
+				{
+					"name": "deleteWorkspace",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"d3f78353-ff2e-477d-b9bd-cbf645d2a7ff\",\r\n    \"name\" : \"\",\r\n    \"description\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/deleteWorkspace",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"deleteWorkspace"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createWorkspace",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"\",\r\n    \"name\" : \"Test Workspace 01\",\r\n    \"description\" : \"Test Workspace 01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/createWorkspace",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"createWorkspace"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "intents",
+			"item": [
+				{
+					"name": "deleteIntent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"intentName\" : \"IntentTest\",\r\n    \"workspaceId\" : \"c73b9241-73b7-4b2a-b23e-a14e7950a17a\",\r\n    \"intentTexts\":\r\n    [\r\n        {\r\n            \"intentTextName\" : \"text01\"\r\n        },\r\n        {\r\n            \"intentTextName\" : \"text02\"\r\n        }        \r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/deleteIntent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"deleteIntent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createIntents",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"intentName\" : \"Intent1\",\r\n    \"workspaceId\" : \"workspaceId\",\r\n    \"intentTexts\":\r\n    [\r\n        {\r\n            \"intentTextName\" : \"text01\"\r\n        },\r\n        {\r\n            \"intentTextName\" : \"text02\"\r\n        }        \r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/createIntents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"createIntents"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "entities",
+			"item": [
+				{
+					"name": "createEntities",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"intentName\" : \"Intent1\",\r\n    \"workspaceId\" : \"workspaceId\",\r\n    \"intentTexts\":\r\n    [\r\n        {\r\n            \"intentTextName\" : \"text01\"\r\n        },\r\n        {\r\n            \"intentTextName\" : \"text02\"\r\n        }        \r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/createEntities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"createEntities"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Actuator endpoints",
+			"item": [
+				{
+					"name": "actuator/env",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9002/actuator/env",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"actuator",
+								"env"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actuator/threaddump",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9002/actuator/threaddump",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"actuator",
+								"threaddump"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actuator/beans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9002/actuator/beans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"actuator",
+								"beans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actuator/health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9002/actuator/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"actuator",
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API",
+			"item": [
+				{
+					"name": "predict",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9002/predict",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"predict"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "train",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"workspace\" : \"5743f1f3-5732-4e9d-9452-fd5ecda7a9fd\",\r\n  \"intents\": [\r\n    {\r\n      \"intent\": \"break-me\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"You need to be broken\"\r\n        },\r\n        {\r\n          \"text\": \"Break me\"\r\n        },\r\n        {\r\n          \"text\": \"Can you help me break the bot connector?\"\r\n        },\r\n        {\r\n          \"text\": \"Can you send me an invalid response?\"\r\n        },\r\n        {\r\n          \"text\": \"Break everything\"\r\n        },\r\n        {\r\n          \"text\": \"Break the bot connector\"\r\n        }\r\n      ],\r\n      \"description\": \"Attempt to break the bot connector with an invalid response\"\r\n    },\r\n    {\r\n      \"intent\": \"moviesearch\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"jumanji\"\r\n        },\r\n        {\r\n          \"text\": \"I want to look up a movie\"\r\n        },\r\n        {\r\n          \"text\": \"Can you tell me more about a movie?\"\r\n        },\r\n        {\r\n          \"text\": \"Can you tell me more about Star Wars?\"\r\n        },\r\n        {\r\n          \"text\": \"I want more information around a movie\"\r\n        },\r\n        {\r\n          \"text\": \"I want to check a movie\"\r\n        }\r\n      ],\r\n      \"description\": \"Searching a movie\"\r\n    },\r\n    {\r\n      \"intent\": \"test_encodedmetadata_with_structuredContent\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"enmsc\"\r\n        },\r\n        {\r\n          \"text\": \"encoded structured metadata\"\r\n        },\r\n        {\r\n          \"text\": \"encoded metadata structured content\"\r\n        },\r\n        {\r\n          \"text\": \"encoded structured content\"\r\n        }\r\n      ],\r\n      \"description\": \"\"\r\n    },\r\n    {\r\n      \"intent\": \"greeting\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"how's it hanging?\"\r\n        },\r\n        {\r\n          \"text\": \"sup?\"\r\n        },\r\n        {\r\n          \"text\": \"Hey, how are you?\"\r\n        },\r\n        {\r\n          \"text\": \"How're you?\"\r\n        },\r\n        {\r\n          \"text\": \"howzit?\"\r\n        },\r\n        {\r\n          \"text\": \"what's up?\"\r\n        }\r\n      ],\r\n      \"description\": \"Responses to how are you etc.\"\r\n    },\r\n    {\r\n      \"intent\": \"fallback\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"test\"\r\n        }\r\n      ],\r\n      \"description\": \"fallback if i don´t understand\"\r\n    },\r\n    {\r\n      \"intent\": \"test_encoded_metadata_quick_replies\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"emdqr\"\r\n        },\r\n        {\r\n          \"text\": \"encoded metadata quick replies\"\r\n        },\r\n        {\r\n          \"text\": \"quick replies with encoded metadata\"\r\n        }\r\n      ],\r\n      \"description\": \"\"\r\n    },\r\n    {\r\n      \"intent\": \"private_message_single\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"pvtmsg\"\r\n        },\r\n        {\r\n          \"text\": \"pvt msg\"\r\n        }\r\n      ],\r\n      \"description\": \"Private message single responsee\"\r\n    },\r\n    {\r\n      \"intent\": \"test_encoded_metadata_with_image\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"imrcen\"\r\n        },\r\n        {\r\n          \"text\": \"image encoded metadata\"\r\n        },\r\n        {\r\n          \"text\": \"image with encoded metadata\"\r\n        }\r\n      ],\r\n      \"description\": \"\"\r\n    },\r\n    {\r\n      \"intent\": \"private_msg_with_transfer\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"pvt ttr\"\r\n        },\r\n        {\r\n          \"text\": \"pvttr\"\r\n        }\r\n      ],\r\n      \"description\": \"\"\r\n    },\r\n    {\r\n      \"intent\": \"escalation\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"I want to speak to a human\"\r\n        },\r\n        {\r\n          \"text\": \"I want to talk to a live agent\"\r\n        },\r\n        {\r\n          \"text\": \"Speak to someone\"\r\n        },\r\n        {\r\n          \"text\": \"Can I speak to a live agent?\"\r\n        },\r\n        {\r\n          \"text\": \"Can I speak to someone?\"\r\n        },\r\n        {\r\n          \"text\": \"Speak to human\"\r\n        }\r\n      ],\r\n      \"description\": \"Escalation to a live agent\"\r\n    },\r\n    {\r\n      \"intent\": \"recommendation\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"Can you please find me something to watch?\"\r\n        },\r\n        {\r\n          \"text\": \"I'm not sure what to watch? Any suggestions?\"\r\n        },\r\n        {\r\n          \"text\": \"What action movie do you recommend?\"\r\n        },\r\n        {\r\n          \"text\": \"Can you suggest a comic-book movie?\"\r\n        },\r\n        {\r\n          \"text\": \"What should I watch for movie night?\"\r\n        }\r\n      ],\r\n      \"description\": \"When the customer asks for a recommendation\"\r\n    },\r\n    {\r\n      \"intent\": \"test_encodedmetadata_with_text\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"text encoded metadata\"\r\n        },\r\n        {\r\n          \"text\": \"encoded metadata text\"\r\n        },\r\n        {\r\n          \"text\": \"emdt\"\r\n        }\r\n      ],\r\n      \"description\": \"\"\r\n    },\r\n    {\r\n      \"intent\": \"test_options_with_encoded_metadata\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"list encoded metadata\"\r\n        },\r\n        {\r\n          \"text\": \"lemd\"\r\n        },\r\n        {\r\n          \"text\": \"lemda\"\r\n        },\r\n        {\r\n          \"text\": \"options encoded metadata\"\r\n        }\r\n      ],\r\n      \"description\": \"\"\r\n    },\r\n    {\r\n      \"intent\": \"test-sdes\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"i want to test sdes\"\r\n        },\r\n        {\r\n          \"text\": \"test sdes\"\r\n        }\r\n      ],\r\n      \"description\": \"test sdes intent\"\r\n    },\r\n    {\r\n      \"intent\": \"goodbye\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"See ya!\"\r\n        },\r\n        {\r\n          \"text\": \"Bye\"\r\n        },\r\n        {\r\n          \"text\": \"That's it for now\"\r\n        },\r\n        {\r\n          \"text\": \"Goodbye\"\r\n        },\r\n        {\r\n          \"text\": \"Thanks! That's it for today!\"\r\n        },\r\n        {\r\n          \"text\": \"Adios!\"\r\n        },\r\n        {\r\n          \"text\": \"Au revoir!\"\r\n        },\r\n        {\r\n          \"text\": \"That's all thanks.\"\r\n        }\r\n      ],\r\n      \"description\": \"Goodbye intent\"\r\n    },\r\n    {\r\n      \"intent\": \"capabilities\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"Help\"\r\n        },\r\n        {\r\n          \"text\": \"What are you capable of?\"\r\n        }\r\n      ],\r\n      \"description\": \"Bot Capabilities\"\r\n    },\r\n    {\r\n      \"intent\": \"bad_sc\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"badsc\"\r\n        },\r\n        {\r\n          \"text\": \"bad sc\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"intent\": \"buytickets\",\r\n      \"examples\": [\r\n        {\r\n          \"text\": \"Can I book a ticket?\"\r\n        },\r\n        {\r\n          \"text\": \"I want to see a movie. Can you help me book a ticket?\"\r\n        },\r\n        {\r\n          \"text\": \"I want to book a movie\"\r\n        },\r\n        {\r\n          \"text\": \"Let me book a ticket\"\r\n        },\r\n        {\r\n          \"text\": \"I want to book a ticket\"\r\n        }\r\n      ],\r\n      \"description\": \"Buy tickets\"\r\n    }\r\n  ],\r\n  \"entities\": [\r\n    {\r\n      \"entity\": \"movie-title\",\r\n      \"values\": [\r\n        {\r\n          \"type\": \"synonyms\",\r\n          \"value\": \"Jumanji\",\r\n          \"synonyms\": []\r\n        },\r\n        {\r\n          \"type\": \"synonyms\",\r\n          \"value\": \"The Hunger Games\",\r\n          \"synonyms\": []\r\n        },\r\n        {\r\n          \"type\": \"synonyms\",\r\n          \"value\": \"Mockingjay\",\r\n          \"synonyms\": []\r\n        },\r\n        {\r\n          \"type\": \"synonyms\",\r\n          \"value\": \"Star Wars\",\r\n          \"synonyms\": []\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"entity\": \"greeting\",\r\n      \"values\": [\r\n        {\r\n          \"type\": \"synonyms\",\r\n          \"value\": \"hey\",\r\n          \"synonyms\": [\r\n            \"hi\",\r\n            \"hello\",\r\n            \"hiya\",\r\n            \"hi there\",\r\n            \"yo\"\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"entity\": \"pleasantries\",\r\n      \"values\": [\r\n        {\r\n          \"type\": \"synonyms\",\r\n          \"value\": \"please\",\r\n          \"synonyms\": []\r\n        },\r\n        {\r\n          \"type\": \"synonyms\",\r\n          \"value\": \"thanks\",\r\n          \"synonyms\": [\r\n            \"thank you\"\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"entity\": \"answer\",\r\n      \"values\": [\r\n        {\r\n          \"type\": \"synonyms\",\r\n          \"value\": \"no\",\r\n          \"synonyms\": [\r\n            \"nope\",\r\n            \"nuh uh\"\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"synonyms\",\r\n          \"value\": \"yes\",\r\n          \"synonyms\": [\r\n            \"yeah\",\r\n            \"yep\",\r\n            \"uh huh\"\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"entity\": \"genre\",\r\n      \"values\": [\r\n        {\r\n          \"type\": \"synonyms\",\r\n          \"value\": \"action\",\r\n          \"synonyms\": [\r\n            \"blockbuster\"\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"synonyms\",\r\n          \"value\": \"romantic comedy\",\r\n          \"synonyms\": [\r\n            \"romcom\",\r\n            \"rom-com\"\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"synonyms\",\r\n          \"value\": \"romantic\",\r\n          \"synonyms\": []\r\n        },\r\n        {\r\n          \"type\": \"synonyms\",\r\n          \"value\": \"comedy\",\r\n          \"synonyms\": []\r\n        },\r\n        {\r\n          \"type\": \"synonyms\",\r\n          \"value\": \"comic-book\",\r\n          \"synonyms\": [\r\n            \"comic book\",\r\n            \"comic\",\r\n            \"marvel\",\r\n            \"dc\",\r\n            \"vertigo\",\r\n            \"dark horse\"\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"synonyms\",\r\n          \"value\": \"drama\",\r\n          \"synonyms\": []\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/train",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"train"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
